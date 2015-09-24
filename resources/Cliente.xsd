@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cliente="http://www.globallogic.com.ar/cliente" xmlns:dic="http://www.globallogic.com.ar/diccionario" targetNamespace="http://www.globallogic.com.ar/cliente" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.globallogic.com.ar/diccionario" schemaLocation="Diccionario.xsd"/>
+	<xs:element name="Empresa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:razonSocial"/>
+				<xs:element ref="dic:cuit"/>
+				<xs:element ref="dic:idEmpresa"/>
+				<xs:element ref="dic:idDireccion"/>
+				<xs:element ref="dic:idRubro"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EmpresaRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:cuit"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EmpresaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:razonSocial"/>
+				<xs:element ref="dic:cuit"/>
+				<xs:element ref="dic:idEmpresa"/>
+				<xs:element ref="dic:idDireccion"/>
+				<xs:element ref="dic:idRubro"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cliente="http://www.globallogic.com.ar/cliente" xmlns:dic="http://www.globallogic.com.ar/diccionario" targetNamespace="http://www.globallogic.com.ar/poliza" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.globallogic.com.ar/diccionario" schemaLocation="Diccionario.xsd"/>
+	<xs:element name="PolizaCabecera">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:fechaContrato"/>
+				<xs:element ref="dic:fechaInicioValidez"/>
+				<xs:element ref="dic:fechaFinValidez"/>
+				<xs:element ref="dic:prima"/>
+				<xs:element ref="dic:premio"/>
+				<xs:element ref="dic:comision"/>
+				<xs:element ref="dic:idPoliza"/>
+				<xs:element ref="dic:idProductor"/>
+				<xs:element ref="dic:idZonaCobertura"/>
+				<xs:element ref="dic:idEmpresaPoliza"/>
+				<xs:element ref="dic:idPlan"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PolizaRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:idPoliza"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PolizaResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:fechaContrato"/>
+				<xs:element ref="dic:fechaInicioValidez"/>
+				<xs:element ref="dic:fechaFinValidez"/>
+				<xs:element ref="dic:prima"/>
+				<xs:element ref="dic:premio"/>
+				<xs:element ref="dic:comision"/>
+				<xs:element ref="dic:idPoliza"/>
+				<xs:element ref="dic:idProductor"/>
+				<xs:element ref="dic:idZonaCobertura"/>
+				<xs:element ref="dic:idEmpresaPoliza"/>
+				<xs:element ref="dic:idPlan"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CarteraRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:idEmpresa"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CarteraResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dic:cuit"/>
+				<xs:sequence maxOccurs="unbounded">
+					<xs:element ref="dic:fechaInicioValidez"/>
+					<xs:element ref="dic:idPlan"/>
+					<xs:element ref="dic:idZonaCobertura"/>
+					<xs:element ref="dic:comision"/>
+					<xs:element ref="dic:prima"/>
+					<xs:element ref="dic:premio"/>
+					<xs:element ref="dic:idPoliza"/>
+					<xs:element ref="dic:idProductor"/>
+					<xs:element ref="dic:idEmpresaPoliza"/>
+					<xs:element ref="dic:fechaFinValidez"/>
+					<xs:element ref="dic:fechaContrato"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
